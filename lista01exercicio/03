@@ -1,0 +1,18 @@
+//3. Escreva uma função que receba dois números: base e expoente e calcule a base elevada ao expoente.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N, EXP, POT;
+            
+            Console.Write("Entre com um número: ");
+            N = Double.Parse(Console.ReadLine());
+            EXP = Double.Parse(Console.ReadLine());
+            POT = Math.Pow(N, EXP);
+
+            Console.WriteLine("A potência do número {0} com expoente { 1} é de: { 2}", N, EXP, POT);
+
+        }
+    }
+}
