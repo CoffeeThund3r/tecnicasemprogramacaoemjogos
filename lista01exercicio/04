@@ -1,0 +1,23 @@
+ //4. Faça um algoritmo que exiba quantas pessoas possuem mais de 18 anos. O algoritmo deverá ler a idade de 10 pessoas.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int idade;
+            Console.WriteLine("Digite sua idade");
+            int.TryParse(Console.ReadLine(), out idade);
+
+            if (idade >=18)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Acesso permitdo");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Acesso Negado");
+            }
+        }
+    }
+}
