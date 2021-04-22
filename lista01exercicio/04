@@ -1,23 +1,25 @@
  //4. Faça um algoritmo que exiba quantas pessoas possuem mais de 18 anos. O algoritmo deverá ler a idade de 10 pessoas.
 
-    class Program
+class Program
     {
         static void Main(string[] args)
         {
-            int idade;
-            Console.WriteLine("Digite sua idade");
-            int.TryParse(Console.ReadLine(), out idade);
-
-            if (idade >=18)
+            int qtde = 0;
+            int idade = 0;
+            Console.WriteLine("Exercício 2 - Verifica maior idade");
+            int i = 0;
+            while (i < 10)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Acesso permitdo");
+                i = i + 1;
+                Console.Write("Informe a idade da pessoa: ");
+                idade = Convert.ToInt32(Console.ReadLine());
+                if (idade >= 18)
+                {
+                    qtde = qtde + 1;
+                }
             }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Acesso Negado");
-            }
+            Console.WriteLine("Existem " + qtde + " pessoas com mais de 18 anos");
+            Console.ReadKey();
         }
     }
 }
