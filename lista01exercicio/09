@@ -1,0 +1,23 @@
+namespace exercicio_09
+{
+    //9. Escreva uma função que retorne a data recebida em 3 parâmetros inteiros DD/MM/AAAA na
+    //forma “DD de Nome do mês de AAAA”.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string txtData = "14/08/1992";
+
+            DateTime dataNascimento = Convert.ToDateTime(txtData);
+
+            int anos = DateTime.Today.Year - dataNascimento.Year;
+
+            if (dataNascimento.Month > DateTime.Today.Month || dataNascimento.Month == DateTime.Today.Month && dataNascimento.Day > DateTime.Today.Day)
+                anos--;
+
+            Console.WriteLine(anos);
+            
+            Console.ReadKey();
+        }
+    }
