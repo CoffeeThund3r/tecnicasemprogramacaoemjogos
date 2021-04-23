@@ -1,0 +1,22 @@
+namespace exercicio_10
+{
+    //10. Desenvolver um algoritmo que efetue a soma de todos os
+    //números ímpares que são múltiplos de três e que se encontram no conjunto dos números de 1 até 500.
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, soma;
+            n = soma = 0;
+
+            for(n=1; n<=500; n++)
+            {
+                if (n % 3 == 0)
+                    soma = soma = n;
+
+            }
+
+            Console.WriteLine("/n/n SOMA: %d/n/n", soma);
+        }
+    }
+}
