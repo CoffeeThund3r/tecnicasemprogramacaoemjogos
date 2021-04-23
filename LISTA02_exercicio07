@@ -1,0 +1,31 @@
+namespace exercicio_07
+{
+    class Program
+    {
+        //7. Faça um programa que leia dois números inteiros e imprima o maior
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introduza x: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduza y: ");
+            int y = int.Parse(Console.ReadLine());
+
+            if (x > y)
+            {
+                Console.WriteLine(x + " é maior do que " + y);
+            }
+            else
+            {
+                if (x == y)
+                {
+                    Console.WriteLine("valores iguais");
+                }
+                else
+                {
+                    Console.WriteLine(y + " é maior do que " + x);
+                }
+            }
+        }
+    }
+    
