@@ -1,0 +1,19 @@
+namespace exercicio_06
+{
+    //6. Faça um programa que leia um valor inteiro e informe se ele é par ou ímpar.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double numero;
+            Console.Write("Digite o valor do numero: ");
+            numero = double.Parse(Console.ReadLine());
+            if (numero == Math.Floor(numero))
+                Console.WriteLine("\u00C9 um n\u00FAmero inteiro");
+            else
+                Console.WriteLine("N\u00E3o \u00E9 um n\u00FAmero inteiro");
+           
+        }
+    }
+}
