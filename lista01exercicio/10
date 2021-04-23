@@ -1,0 +1,76 @@
+//10. Escreva uma função que calcule a área de um triângulo, recebendo a base e a altura.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a, b, c, P;
+            double Area;
+          
+            try
+            {
+                Console.Write("Informe o Lado A : ");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Informe o Lado B : ");
+                b = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Informe o lado C : ");
+                c = Convert.ToDouble(Console.ReadLine());
+                if (verificaSeTrianguloExiste(a, b, c))
+                {
+                    P = (a + b + c) / 2;
+                    Area = Math.Sqrt(P * (P - a) * (P - b) * (P - c));
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("A Area do Triângulo de lados " + a + "," + b + " e " + c + " é igual a : " + Area);
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Não existe triângulo com os lados informados");
+                    Console.ReadKey();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
+            }
+        }
+        private static bool verificaSeTrianguloExiste(double a, double b, double c)
+        {
+            // Exemplo : 5, 10 e 9 -> verdadeiro
+            // A condição de existência 
+            //| b - c | < a < b + c
+            //| a - c | < b < a + c
+            //| a - b | < c < a + b
+            //-------------------------
+            double bc = Math.Abs(b - c);
+            double ac = Math.Abs(a - c);
+            double ab = Math.Abs(a - b);
+            //
+            bool cond1 = false;
+            bool cond2 = false;
+            bool cond3 = false;
+            if (bc < a && a < b + c)
+            {
+                cond1 = true;
+            }
+            if (ac < b && b < a + c)
+            {
+                cond2 = true;
+            }
+            if (ab < c && c < a + b)
+            {
+                cond3 = true;
+            }
+            if (cond1 && cond2 && cond3)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
