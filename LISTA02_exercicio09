@@ -1,0 +1,44 @@
+namespace exercicio_09
+{
+    // 9. Faça um programa que simule uma calculadora. O usuário deverá entrar com o valor de dois números e
+    // depois escolher se quer somar, subtrair, multiplicar ou dividir estes valores.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 0; int num2 = 0;
+
+            Console.WriteLine("Digite um número e pressione Enter");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite outro número e pressione Enter");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Escolha uma opção na lista a seguir:");
+            Console.WriteLine("\t+ - Adição");
+            Console.WriteLine("\t- - Subtração");
+            Console.WriteLine("\t* - Multiplicação");
+            Console.WriteLine("\t/ - Divisão");
+            Console.Write("Sua opção? ");
+
+            switch (Console.ReadLine())
+            {
+                case "+":
+                    Console.WriteLine($"Seu resultado: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "-":
+                    Console.WriteLine($"Seu resultado: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "*":
+                    Console.WriteLine($"Seu resultado: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "/":
+                    Console.WriteLine($"Seu resultado: {num1} / {num2} = " + (num1 / num2));
+                    break;
+            }
+            Console.Write("Pressione qualquer tecla para fechar o aplicativo do console Calculadora ...");
+            Console.ReadKey();
+        }
+    }
+}
